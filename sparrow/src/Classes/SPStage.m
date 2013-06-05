@@ -59,7 +59,7 @@
 
 - (void)render:(SPRenderSupport *)support
 {
-    [SPRenderSupport clearWithColor:_color alpha:1.0f];
+//    [SPRenderSupport clearWithColor:_color alpha:1.0f];
     [support setupOrthographicProjectionWithLeft:0 right:_width top:0 bottom:_height];
     
     [super render:support];
