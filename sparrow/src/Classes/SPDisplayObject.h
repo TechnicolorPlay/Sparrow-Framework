@@ -168,7 +168,7 @@
 @property (weak, nonatomic, readonly) SPDisplayObject *base;
 
 /// The transformation matrix of the object relative to its parent.
-/// @returns CAUTION: not a copy, but the actual object!
+/// returns CAUTION: not a copy, but the actual object!
 @property (nonatomic, copy) SPMatrix *transformationMatrix;
 
 /// The name of the display object (default: nil). Used by `childByName:` of display object containers.
