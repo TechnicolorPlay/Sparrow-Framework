@@ -136,7 +136,8 @@
 + (uint)checkForOpenGLError
 {
     GLenum error = glGetError();
-    if (error != 0) NSLog(@"There was an OpenGL error: 0x%x", error);
+    if (error != 0)
+		NSLog(@"There was an OpenGL error: 0x%x (%s)", error, strerror(error));
     return error;
 }
 

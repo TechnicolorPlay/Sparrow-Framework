@@ -319,6 +319,11 @@
     
     int numIndices = _numQuads * 6;
     glDrawElements(GL_TRIANGLES, numIndices, GL_UNSIGNED_SHORT, 0);
+	
+	glDisableVertexAttribArray(attribPosition);
+    glDisableVertexAttribArray(attribColor);
+	if ( _texture )
+		glDisableVertexAttribArray(attribTexCoords);
 }
 
 + (id)quadBatch
