@@ -17,6 +17,10 @@
 @class SPTextField;
 @class SPSprite;
 
+#define SP_EVENT_TYPE_BUTTON_UP @"button_up"
+#define SP_EVENT_TYPE_BUTTON_DOWN @"button_down"
+
+
 /** ------------------------------------------------------------------------------------------------
 
  An SPButton is a simple button composed of an image and, optionally, text.

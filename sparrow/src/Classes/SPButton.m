@@ -109,6 +109,7 @@
         _contents.x = (1.0f - _scaleWhenDown) / 2.0f * _background.width;
         _contents.y = (1.0f - _scaleWhenDown) / 2.0f * _background.height;
         _isDown = YES;
+        [self dispatchEventWithType:SP_EVENT_TYPE_BUTTON_DOWN bubbles:YES];
     }
     else if (touch.phase == SPTouchPhaseMoved && _isDown)
     {
@@ -135,6 +136,8 @@
 
 - (void)resetContents
 {
+	if ( _isDown )
+        [self dispatchEventWithType:SP_EVENT_TYPE_BUTTON_UP bubbles:YES];
     _isDown = NO;
     _background.texture = _upState;
     _contents.x = _contents.y = 0;        
