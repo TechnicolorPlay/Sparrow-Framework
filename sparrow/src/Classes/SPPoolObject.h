@@ -23,6 +23,8 @@
 
 @end
 
+#define DISABLE_MEMORY_POOLING
+
 #ifndef DISABLE_MEMORY_POOLING
 
   #define SP_IMPLEMENT_MEMORY_POOL()                         \
